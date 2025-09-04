@@ -1,0 +1,60 @@
+# Apache configuration for admin directory
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Prevent directory listing
+Options -Indexes
+
+# Deny access to all files by default
+Order Deny,Allow
+Deny from all
+
+# Allow access to specific files
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Allow from all
+</FilesMatch>
+
+# Allow access to index.php
+<Files "index.php">
+    Allow from all
+</Files>
+
+# Allow access to api.php
+<Files "api.php">
+    Allow from all
+</Files>
+
+# Allow access to install.php (should be deleted after installation)
+<Files "install.php">
+    Allow from all
+</Files>
+
+# Deny access to configuration files
+<Files "db.php">
+    Deny from all
+</Files>
+
+# Deny access to JSON files
+<Files "*.json">
+    Deny from all
+</Files>
+
+# Set proper content types
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType application/javascript .js
+    AddType text/css .css
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always append X-Frame-Options SAMEORIGIN
+    
+    # Prevent MIME-type sniffing
+    Header always set X-Content-Type-Options nosniff
+    
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
