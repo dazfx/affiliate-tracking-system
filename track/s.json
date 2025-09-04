@@ -1,15 +1,1 @@
-{
-  "partners": [
-    {
-      "id": "partner1",
-      "name": "Example Partner",
-      "target_domain": "example.com",
-      "clickid_keys": ["clickid", "cid"],
-      "sum_keys": ["sum", "payout"],
-      "sum_mapping": [
-        {"from": "10.00", "to": "8.50"},
-        {"from": "20.00", "to": "17.00"}
-      ]
-    }
-  ]
-}
+{\n    \"partners\": [],\n    \"settings\": {\n        \"default_commission\": 0,\n        \"enable_ip_whitelist\": false,\n        \"enable_user_agent_check\": false,\n        \"enable_rate_limiting\": true,\n        \"rate_limit_requests\": 100,\n        \"rate_limit_window\": 3600,\n        \"log_postbacks\": true,\n        \"log_failed_postbacks\": true,\n        \"enable_queue\": true,\n        \"queue_batch_size\": 50,\n        \"queue_retry_attempts\": 3,\n        \"queue_retry_delay\": 60,\n        \"enable_telegram\": false,\n        \"telegram_bot_token\": \"\",\n        \"telegram_chat_id\": \"\",\n        \"enable_google_sheets\": false,\n        \"google_sheets_id\": \"\",\n        \"google_sheets_range\": \"Postbacks!A:E\",\n        \"google_sheets_credentials\": \"\",\n        \"enable_email_notifications\": false,\n        \"email_smtp_host\": \"\",\n        \"email_smtp_port\": 587,\n        \"email_smtp_username\": \"\",\n        \"email_smtp_password\": \"\",\n        \"email_from\": \"\",\n        \"email_to\": \"\",\n        \"enable_webhook\": false,\n        \"webhook_url\": \"\",\n        \"webhook_method\": \"POST\",\n        \"webhook_headers\": [],\n        \"webhook_timeout\": 30\n    },\n    \"integrations\": {\n        \"telegram\": {\n            \"enabled\": false,\n            \"bot_token\": \"\",\n            \"chat_id\": \"\"\n        },\n        \"google_sheets\": {\n            \"enabled\": false,\n            \"sheet_id\": \"\",\n            \"range\": \"Postbacks!A:E\",\n            \"credentials\": \"\"\n        },\n        \"webhook\": {\n            \"enabled\": false,\n            \"url\": \"\",\n            \"method\": \"POST\",\n            \"headers\": [],\n            \"timeout\": 30\n        }\n    }\n}
