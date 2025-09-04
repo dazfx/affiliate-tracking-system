@@ -1,0 +1,47 @@
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+tmp/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Composer
+vendor/
+
+# Database
+*.sql.gz
+*.sql.zip
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+[Tt]humbs.db
+
+# Ignore track/admin/config.php if it exists
+track/admin/config.php
+
+# Ignore any local configuration files
+config.local.php
+local.config.php
+
+# Ignore user-specific files
+s.json
