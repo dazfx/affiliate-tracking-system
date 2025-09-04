@@ -1,15 +1,1 @@
-{
-  "partners": [
-    {
-      "id": "partner1",
-      "name": "Example Partner",
-      "target_domain": "example.com",
-      "clickid_keys": ["clickid", "cid"],
-      "sum_keys": ["sum", "payout"],
-      "sum_mapping": [
-        {"from": "10.00", "to": "8.50"},
-        {"from": "20.00", "to": "17.00"}
-      ]
-    }
-  ]
-}
+{\n    \"admin_users\": [],\n    \"security\": {\n        \"enable_2fa\": false,\n        \"enable_ip_restriction\": false,\n        \"allowed_ips\": [],\n        \"session_timeout\": 3600,\n        \"max_login_attempts\": 5,\n        \"lockout_duration\": 900,\n        \"enable_captcha\": false,\n        \"captcha_secret\": \"\",\n        \"enable_ssl\": true,\n        \"force_https\": true\n    },\n    \"appearance\": {\n        \"theme\": \"light\",\n        \"language\": \"ru\",\n        \"timezone\": \"Europe/Moscow\",\n        \"date_format\": \"d.m.Y H:i\",\n        \"items_per_page\": 25\n    },\n    \"notifications\": {\n        \"enable_email_alerts\": false,\n        \"enable_slack_alerts\": false,\n        \"enable_webhook_alerts\": false,\n        \"alert_thresholds\": {\n            \"high_commission\": 1000,\n            \"high_clicks\": 10000,\n            \"high_conversions\": 1000\n        }\n    },\n    \"api\": {\n        \"enable_api\": true,\n        \"api_rate_limit\": 1000,\n        \"api_rate_window\": 3600,\n        \"allowed_origins\": []\n    }\n}
