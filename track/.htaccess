@@ -1,0 +1,31 @@
+# Apache configuration for track directory
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Prevent directory listing
+Options -Indexes
+
+# Allow access to postback.php and process_queue.php
+<Files "postback.php">
+    Require all granted
+</Files>
+
+<Files "process_queue.php">
+    Require all granted
+</Files>
+
+# Deny access to all other PHP files
+<Files "*.php">
+    Require all denied
+</Files>
+
+# Allow access to JSON files
+<Files "*.json">
+    Require all granted
+</Files>
+
+# Set proper content types
+<IfModule mod_mime.c>
+    AddType application/json .json
+</IfModule>
