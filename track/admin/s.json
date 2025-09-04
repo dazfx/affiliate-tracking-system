@@ -1,0 +1,15 @@
+{
+  "partners": [
+    {
+      "id": "partner1",
+      "name": "Example Partner",
+      "target_domain": "example.com",
+      "clickid_keys": ["clickid", "cid"],
+      "sum_keys": ["sum", "payout"],
+      "sum_mapping": [
+        {"from": "10.00", "to": "8.50"},
+        {"from": "20.00", "to": "17.00"}
+      ]
+    }
+  ]
+}
